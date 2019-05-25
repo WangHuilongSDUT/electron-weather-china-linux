@@ -1,0 +1,18 @@
+{
+  "name": "electron-weather-china",
+  "version": "0.0.1",
+  "description": "Weather app",
+  "main": "./static/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package": "electron-packager ./  electron-weather-china --platform=linux --arch=x64 --out=./app  --app-version 1.0.0 --electron-version=5.0.1 --overwrite"
+
+  },
+  "author": "wsl",
+  "license": "MIT",
+  "dependencies": {
+    "echarts": "^4.2.1",
+    "jquery": "^3.4.1"
+  }
+}

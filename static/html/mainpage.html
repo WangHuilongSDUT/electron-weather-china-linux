@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/mainpage.css" />
+</head>
+
+<body>
+
+    <div class="bg-image"></div>
+    <div class="up">
+        <div class="upleft">
+            <p class="week" id="week">星期几</p>
+            <p class="tip datetip">阳历</p>
+            <p class="date" id="date">某年某月某日</p>
+            <p class="tip lunurtip">阴历</p>
+            <p class="lunur" id="lunur">某月某日</p>
+            <p class="todo" id="todo">宜：</p>
+            <p class="nottodo" id="nottodo">忌：</p>
+        </div>
+        <div class="upcenter">
+            <p class="where" id="where">某地</p>
+            <img class="mainico" id="mainico" src="../res/images/天气.png" />
+            <p class="condition" id="condition"></p>
+            <p class="tempture" id="tempture">温度</p>
+            <p class="snalltip" id="smalltip">贴心提示</p>
+            <!-- <p class="sunrd" id="sunrd">日出日落：6/18</p> -->
+        </div>
+        <div class="upright">
+            <p class="windto" id="windto">风向：</p>
+            <p class="windlevel" id="windlevel">风力：</p>
+            <p class="water" id="water">湿度：</p>
+            <p class="airpress" id="airpress">气压：</p>
+            <p class="warningtip" id="warningtip">其他：</p>
+            <p class="warning" id="warning">又是美好的一天啊！</p>
+        </div>
+    </div>
+
+    <div class="down">
+        <div id="chart" class="chart"></div>
+        <div  class="weekdays" id="weekdays">
+            <ul class="ulweek" id="ulweek">
+                <li class="mon" id="mon"><img src="../res/images/天气.png" /></li>
+                <li class="tue" id="tue"><img src="../res/images/天气.png" /></li>
+                <li class="wed" id="wed"><img src="../res/images/天气.png" /></li>
+                <li class="thu" id="thu"><img src="../res/images/天气.png" /></li>
+                <li class="fri" id="fri"><img src="../res/images/天气.png" /></li>
+                <li class="sat" id="sat"><img src="../res/images/天气.png" /></li>
+                <li class="sun" id="sun"><img src="../res/images/天气.png" /></li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/mainpage.js"></script>
+</body>
+</html>
