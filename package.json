@@ -7,12 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "package": "electron-packager ./  electron-weather-china --platform=linux --arch=x64 --out=./app  --app-version 1.0.0 --electron-version=5.0.1 --overwrite"
-
   },
-  "author": "wsl",
+  "author": "sdutwsl",
   "license": "MIT",
   "dependencies": {
     "echarts": "^4.2.1",
+    "electron": "^10.1.5",
     "jquery": "^3.4.1"
   }
 }
