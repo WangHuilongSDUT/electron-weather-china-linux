@@ -1,0 +1,14 @@
+{
+  "name": "weather_service_server",
+  "version": "1.0.0",
+  "description": "sdutwsl_weather_api",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "sdutwsl",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.0"
+  }
+}
