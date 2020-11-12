@@ -9,6 +9,7 @@
   "author": "sdutwsl",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.0",
     "koa": "^2.13.0"
   }
 }
