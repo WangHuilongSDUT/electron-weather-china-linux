@@ -168,11 +168,12 @@ function getWarning(place) {
 //获取当前天气实况并更新
 function getCurrent(place) {
     //var ret
-    $.getJSON('#' + place, function (data) {
+    $.getJSON(baseurl+'/Life/GetWeather24Data?place='+place, function (data) {
         // console.log(data+"")
+        const result=data.showapi_res_body
         //地区  
-        $('#where').html(data['data']['city']['pname'] + data['data']['city']['name'])
-        var condition = data['data']['condition']['condition']
+        $('#where').html(result.area)
+        var condition = result.hourList[0].weather
         //天气图片选取
         if (-1 != condition.indexOf('雪')) {
             $('#mainico').attr({ 'src': '../res/images/雪.png' })
@@ -198,17 +199,17 @@ function getCurrent(place) {
         //更新天气
         $('#condition').html(condition)
         //气温
-        $('#tempture').html(data['data']['condition']['temp'] + "摄氏度")
+        $('#tempture').html(result.hourList[0].temperature+ "摄氏度")
         //小提示
-        $('#smalltip').html(data['data']['condition']['tips'])
+        // $('#smalltip').html(data['data']['condition']['tips'])
         //风向
-        $('#windto').html(data['data']['condition']['windDir'])
+        // $('#windto').html(data['data']['condition']['windDir'])
         //风力
-        $('#windlevel').html(data['data']['condition']['windLevel'] + "级风")
+        $('#windlevel').html(result.hourList[0].wind_power)
         //湿度
-        $('#water').html(data['data']['condition']['humidity'] + "%的湿度")
+        // $('#water').html(data['data']['condition']['humidity'] + "%的湿度")
         //气压
-        $('#airpress').html(data['data']['condition']['pressure'] + "hPa的气压")
+        // $('#airpress').html(data['data']['condition']['pressure'] + "hPa的气压")
     });
 }
 
