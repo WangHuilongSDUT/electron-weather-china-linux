@@ -9,12 +9,8 @@ const wnl_api="https://jisuwnl.market.alicloudapi.com/calendar/"
 const weather_api="https://saweather.market.alicloudapi.com/area-to-weather"
 
 
-async function get_lunnar_data(api) {
-    const res=axios({
-        method: 'get',
-        url: wnl_api,
-        data: {
-            headers: {'Authorization': 'XMLHttpRequest'},
-        }
-      })
+async function get_lunnar_data(api=wnl_api) {
+    const now=new Date()
+    const res=await axios.get(api+`query?date=`,{headers: {'Authorization': 'APPCODE '+ali_config["app_code"]}})
+    return res.data
 }
