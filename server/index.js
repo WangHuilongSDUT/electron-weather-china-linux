@@ -55,7 +55,7 @@ router.get('/GetLunnarData', async (ctx, next) => {
     ctx.body = await get_lunnar_data()
 }).get('/GetWeather7Data', async (ctx, next) => {
     ctx.body = await get_weather7_data(ctx.query?.place)
-}).get('GetWeather24Data', async (ctx, next) => {
+}).get('/GetWeather24Data', async (ctx, next) => {
     ctx.body = await get_weather24_data(ctx.query?.place)
 })
 
